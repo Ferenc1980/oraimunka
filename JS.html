@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script help</title>
+    <script>
+        alert("A hed-ban vagyok")
+        console.log("ok")
+        let n=10
+
+        /*if(n%2===0){
+            console.log("a szam paros")
+        }else{
+            console.log("a szam paratlan")
+        }*/
+
+        console.log(n%2===0 ? "paros" : "paratlan" )
+        
+        //nyil fuggveny
+        const osszead=(a,b)=>a+b
+        console.log(osszead(10,20))
+
+        //max fuggveny
+        const maxFg=(a,b)=> a>b ? a+" a nagyobb"  : b+" a nagyobb";
+        console.log(maxFg(10,20))
+
+        //for...of ciklus
+        const szamok=[2,3,45,10,62,85,9]
+        console.log(szamok)
+        for(let szam of szamok)
+            console.log(szam)
+
+        //filter kipróbálása
+        const parosTomb=szamok.filter((e)=>e%2===0)
+        console.log(parosTomb)
+
+        //kereses tombben
+        const szavak=["alma","alap","kalap","korte","falaz", "kep"]
+        const reszTomb=szavak.filter( (e)=>e.indexOf("ala")!==-1 )
+        console.log(reszTomb)
+        
+        //reduce - összegez
+        const osszeg=szamok.reduce((s,e)=>s+e,0)
+        console.log("a tomb elemeinek osszege: " +osszeg)
+
+        //forEach
+        szavak.forEach((e,i)=> console.log(i+" "+e))
+        console.log(szamok)
+        szamok.forEach((e,i,ujtomb)=> ujtomb[i]=2*e)
+        console.log(szamok)
+        console.log(szamok.some((e)=>e>1250)) //van olyan
+        console.log(szamok.every((e)=>e>0)) //minden számra igaz
+        
+        
+
+
+
+    </script>    
+
+</head>
+<body>
+    
+</body>
+</html>
